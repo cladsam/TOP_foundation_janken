@@ -3,6 +3,11 @@ const possibleChoices = {
     Paper: 'Paper',
     Scissor: 'Scissor',
 }
+const gameResult = {
+    Tie: 0,
+    PlayerWin: 1,
+    PlayerLoose: 2,
+}
 
 let getComputerChoice = () => {
     choice = Math.floor(Math.random() * 3);
@@ -20,21 +25,21 @@ let getComputerChoice = () => {
 function playRound(playerSelection, computerSelection) {
     let playerSelectionNormalized = normalizeSelection(playerSelection)
 
-
-    if (playerSelectionNormalized === computerSelection) return "Tie";
     let playWin;
+    if (playerSelectionNormalized === computerSelection) return gameResult.Tie;
+
     switch (playerSelectionNormalized) {
         case possibleChoices.Paper:
-            playWin = computerSelection === possibleChoices.Rock ? true : false;
+            playWin = computerSelection === possibleChoices.Rock ? gameResult.PlayerWin : gameResult.PlayerLoose;
             break;
         case possibleChoices.Rock:
-            playWin = computerSelection === possibleChoices.Scissor ? true : false;
+            playWin = computerSelection === possibleChoices.Scissor ? gameResult.PlayerWin : gameResult.PlayerLoose;
             break;
         case possibleChoices.Scissor:
-            playWin = computerSelection === possibleChoices.Paper ? true : false;
+            playWin = computerSelection === possibleChoices.Paper ? gameResult.PlayerWin : gameResult.PlayerLoose;
             break;
     }
-    return playWin ? `You win! ${playerSelectionNormalized} beats ${computerSelection}` : `You Loose! ${computerSelection} beats ${playerSelectionNormalized}`;
+    return playWin;
 }
 
 function normalizeSelection(playerSelection) {
