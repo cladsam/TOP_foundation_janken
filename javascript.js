@@ -63,19 +63,21 @@ function game() {
                 console.log("It's a Tie !");;
                 break;
             case gameResult.PlayerWin:
-                console.log("You win " + userChoice + "beats " + computerChoice);
+                console.log("You win " + userChoice + " beats " + computerChoice);
                 scorePlayer++;
                 break;
             case gameResult.PlayerLoose:
-                console.log("You loose " + computerChoice + "beats " + userChoice);
+                console.log("You loose " + computerChoice + " beats " + userChoice);
                 scoreComputer++;
                 break
         }
-
+        if (scoreComputer < 5 && scorePlayer < 5) {
+            console.log("Actual score : Player " + scorePlayer + " Computer " + scoreComputer);
+        }
     }
     while (scoreComputer < 5 && scorePlayer < 5)
 
     // display Game result
-    scoreComputer > scorePlayer ? console.log("You loss " + scoreComputer + "to " + scorePlayer) : console.log("You won " + scorePlayer + "to " + scoreComputer);
+    scoreComputer > scorePlayer ? console.log("You loss " + scoreComputer + " to " + scorePlayer) : console.log("You won " + scorePlayer + " to " + scoreComputer);
 
 }
