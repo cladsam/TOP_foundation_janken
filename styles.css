@@ -114,8 +114,8 @@ img {
     width: 120px;
     height: 50px;
     /* flex: 1; */
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 0px;
     border-radius: 8px
         /* align-self: stretch; */
 }
@@ -133,6 +133,16 @@ img {
     justify-content: center;
     flex: 1;
     align-self: center;
+}
+
+#buttons {
+    margin-top: 80px;
+}
+
+#turnResult {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
 }
 
 /* / / */
