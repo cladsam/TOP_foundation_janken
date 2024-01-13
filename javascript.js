@@ -132,16 +132,16 @@ function playRound(userChoice) {
     let turnResultString;
     switch (turnResult) {
         case gameResult.Tie:
-            console.log("It's a Tie !");;
+            // console.log("It's a Tie !");;
             turnResultString = "It's a Tie !";
             break;
         case gameResult.PlayerWin:
-            console.log(`You win ${userChoice} beats ${computerChoice}`);
+            // console.log(`You win ${userChoice} beats ${computerChoice}`);
             turnResultString = `You win ${userChoice} beats ${computerChoice}`;
             scorePlayer++;
             break;
         case gameResult.PlayerLoose:
-            console.log(`You loose ${computerChoice} beats ${userChoice}`);
+            // console.log(`You loose ${computerChoice} beats ${userChoice}`);
             turnResultString = `You loose ${computerChoice} beats ${userChoice}`;
             scoreComputer++;
             break;
