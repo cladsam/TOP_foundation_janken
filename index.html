@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -17,18 +17,24 @@
         <div class="game">
             <div class="score">
                 <p class="firstP">Score</p>
-                <p><span>Player</span> - <span>Comp</span></p>
-                <p id="score">? - ?</p>
+                <p> First to 5 wins</p>
+                <!-- <p><span>Player</span> - <span>Comp</span></p> -->
+                <p id="score"> Player : ? - computer : ?</p>
                 <p>Choice</p>
+                <!-- </span> -->
+                <span id="choice">
+                    <img id="choiceUser" width="20px" height="20px" hidden> <span>-</span><img id="choiceComputer"
+                        width="20px" height="20px" hidden>
+                    <!-- <p>-</p><span id="choiceComputer">
+                        <p><span>Player</span> - <span>Computer</span></p> -->
                 </span>
-                <p id="choicePalyer">-</p><span id="choiceComputer"></span>
-                <p><span>Player</span> - <span>Computer</span></p>
             </div>
             <div class="buttons">
                 <button id="btnRock"><img src="Images/Rock.png" alt="Rock"></button>
                 <button id="btnPaper"><img src="Images/Paper.png" alt="Paper"></button>
                 <button id="btnScissor"><img src="Images/Scissor.png" alt="Scissor"></button>
             </div>
+            <button id="btnNewGame">Start New Game</button>
         </div>
         <div class=" footer">
             <p>Morgan Bourgeois &copy 2024</p>

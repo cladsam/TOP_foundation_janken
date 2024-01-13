@@ -1,3 +1,8 @@
+let game_started = true;
+let player_score = 0;
+let computer_score = 0;
+
+
 const possibleChoices = {
     Rock: 'Rock',
     Paper: 'Paper',
@@ -42,10 +47,7 @@ function playRound(playerSelection, computerSelection) {
     return playWin;
 }
 
-function normalizeSelection(playerSelection) {
-    return playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
 
-};
 function game() {
     let scorePlayer = 0;
     let scoreComputer = 0;
@@ -81,3 +83,20 @@ function game() {
     scoreComputer > scorePlayer ? console.log("You loss " + scoreComputer + " to " + scorePlayer) : console.log("You won " + scorePlayer + " to " + scoreComputer);
 
 }
+
+
+const btnRock = document.querySelector("#btnRock");
+const btnPaper = document.querySelector("#btnPaper");
+const btnScissor = document.querySelector("#btnScissor");
+btnPaper.addEventListener('click', () => { playRound(possibleChoices.Paper, getComputerChoice()) });
+btnRock.addEventListener('click', () => { playRound(possibleChoices.Rock, getComputerChoice()) });
+btnScissor.addEventListener('click', () => { playRound(possibleChoices.Scissor, getComputerChoice()) });
+
+
+
+
+// Code Obsolete (used for console version of the game)
+function normalizeSelection(playerSelection) {
+    return playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
+
+};

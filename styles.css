@@ -1,17 +1,20 @@
 /* * {
-    border: 1px solid green;
+    border: 1px solid red;
     margin: 0;
 } */
+
 @font-face {
     font-family: 'Tektur';
     src: url('assets/Tektur/Tektur-VariableFont_wdth\,wght.ttf') format('truetype');
 }
+
 
 body {
     border: 0;
     margin: 0;
     padding: 0;
     height: 100vh;
+
 
 }
 
@@ -51,6 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Tektur";
+    margin-bottom: 0px;
 
 }
 
@@ -59,6 +63,7 @@ body {
     /* border: 1px red solid; */
     margin-bottom: auto;
     font-weight: 600;
+    font-size: 52px;
 }
 
 .game {
@@ -67,7 +72,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
-    margin-top: 20px;
+    margin-top: -5px;
     margin-bottom: auto;
     /* padding-top: 30px; */
     font-family: "Tektur";
@@ -101,7 +106,33 @@ img {
 
 .firstP {
     font-size: 50px;
+    margin-top: 5px;
     margin-bottom: 10px;
+}
+
+#btnNewGame {
+    width: 120px;
+    height: 50px;
+    /* flex: 1; */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px
+        /* align-self: stretch; */
+}
+
+#choiceUser,
+#choiceComputer {
+    width: 45px;
+    height: 45px;
+    /* display: none; */
+    margin-bottom: 25px;
+}
+
+#choice {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-self: center;
 }
 
 /* / / */
